@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t abargiela/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run abargiela/docker-react npm run test -- --coverage
+  
