@@ -7,4 +7,3 @@ before_install:
 
 script:
   - docker run abargiela/docker-react npm run test -- --coverage
-  
